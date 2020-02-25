@@ -37,5 +37,23 @@ func (c *Client) Posts() []*Post {
 	}
 	name := doc.Find("div.group-desc h1").Text()
 	fmt.Println(name)
+	doc.Find("table.olt tbody tr").Each(func(i int, s *goquery.Selection) {
+		switch i {
+		case 1:
+			s.Find("td").Each(func(ii int, ss *goquery.Selection) {
+				switch ii {
+				case 1:
+					fmt.Println(ss.Text())
+				case 2:
+					fmt.Println(ss.Text())
+				case 3:
+					fmt.Println(ss.Text())
+				case 4:
+					fmt.Println(ss.Text())
+				}
+			})
+		default:
+		}
+	})
 	return []*Post{}
 }
