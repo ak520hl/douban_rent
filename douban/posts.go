@@ -20,7 +20,7 @@ type Post struct {
 }
 
 // get all posts
-func (c *Client) Posts() []*Post {
+func (c *Client) Posts() (posts []*Post) {
 
 	req, err := c.NewRequest(http.MethodGet, Url)
 	if err != nil {
@@ -39,15 +39,15 @@ func (c *Client) Posts() []*Post {
 	}
 	name := doc.Find("div.group-desc h1").Text()
 	fmt.Println(name)
-	posts := []*Post{}
 	doc.Find("table.olt tbody tr").Each(func(i int, s *goquery.Selection) {
-		post := Post{}
+		post := &Post{}
 		s.Find("td").Each(func(ii int, ss *goquery.Selection) {
 			switch ii {
 			case 0: // title
 				post.Title = strings.TrimSpace(ss.Text())
 				url, exist := ss.Find("a").Attr("href")
 				if exist {
+					// Url
 					post.Url = url
 				}
 			case 1: // author
@@ -58,7 +58,7 @@ func (c *Client) Posts() []*Post {
 				post.LastPostTime = strings.TrimSpace(ss.Text())
 			}
 		})
-		posts = append(posts, &post)
+		posts = append(posts, post)
 	})
 	return posts
 }

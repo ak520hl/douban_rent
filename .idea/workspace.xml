@@ -4,8 +4,6 @@
     <list default="true" id="947ca51d-c6af-45d7-abe5-6bdb597d399b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/douban/posts.go" beforeDir="false" afterPath="$PROJECT_DIR$/douban/posts.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/worker/worker.go" beforeDir="false" afterPath="$PROJECT_DIR$/worker/worker.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +89,7 @@
       <option name="presentableId" value="Default" />
       <updated>1582608653156</updated>
       <workItem from="1582608654949" duration="12446000" />
-      <workItem from="1582680659176" duration="8471000" />
+      <workItem from="1582680659176" duration="9455000" />
     </task>
     <servers />
   </component>
