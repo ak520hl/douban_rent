@@ -5,16 +5,17 @@ import (
 	"github.com/PuerkitoBio/goquery"
 	"log"
 	"net/http"
+	"strings"
 )
 
 var (
 	Url = "https://www.douban.com/group/106955/"
 )
 type Post struct {
-	title string
-	content string
-	postUser string
-	postUid int
+	Title string
+	Author string
+	LastPostTime string
+	LastRePost string
 }
 
 // get all posts
@@ -37,23 +38,22 @@ func (c *Client) Posts() []*Post {
 	}
 	name := doc.Find("div.group-desc h1").Text()
 	fmt.Println(name)
+	posts := []*Post{}
 	doc.Find("table.olt tbody tr").Each(func(i int, s *goquery.Selection) {
-		switch i {
-		case 1:
-			s.Find("td").Each(func(ii int, ss *goquery.Selection) {
-				switch ii {
-				case 1:
-					fmt.Println(ss.Text())
-				case 2:
-					fmt.Println(ss.Text())
-				case 3:
-					fmt.Println(ss.Text())
-				case 4:
-					fmt.Println(ss.Text())
-				}
-			})
-		default:
-		}
+		post := Post{}
+		s.Find("td").Each(func(ii int, ss *goquery.Selection) {
+			switch ii {
+			case 0: // title
+				post.Title = strings.TrimSpace(ss.Text())
+			case 1: // author
+				post.Author = strings.TrimSpace(ss.Text())
+			case 2: // lastRePost
+				post.LastRePost = strings.TrimSpace(ss.Text())
+			case 3: // lastPostTime
+				post.LastPostTime = strings.TrimSpace(ss.Text())
+			}
+		})
+		posts = append(posts, &post)
 	})
-	return []*Post{}
+	return posts
 }
