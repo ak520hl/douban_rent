@@ -16,6 +16,7 @@ type Post struct {
 	Author string
 	LastPostTime string
 	LastRePost string
+	Url string
 }
 
 // get all posts
@@ -45,6 +46,10 @@ func (c *Client) Posts() []*Post {
 			switch ii {
 			case 0: // title
 				post.Title = strings.TrimSpace(ss.Text())
+				url, exist := ss.Find("a").Attr("href")
+				if exist {
+					post.Url = url
+				}
 			case 1: // author
 				post.Author = strings.TrimSpace(ss.Text())
 			case 2: // lastRePost

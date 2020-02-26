@@ -24,7 +24,7 @@ func (w *Worker) fetchPosts() []*douban.Post {
 	defer log.Printf("End fetch douban rent posts")
 	posts := w.client.Posts()
 	for _, post := range posts {
-		log.Printf("%s %s %s %s", post.Title, post.Author, post.LastRePost, post.LastPostTime)
+		log.Printf("%s %s %s %s %s", post.Title, post.Author, post.LastRePost, post.LastPostTime, post.Url)
 	}
 	return posts
 }
