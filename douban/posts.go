@@ -9,7 +9,7 @@ import (
 )
 
 var (
-	Url = "https://www.douban.com/group/106955/"
+	Url = "https://www.douban.com/group/637628/"
 )
 type Post struct {
 	Title string
@@ -48,6 +48,8 @@ func (c *Client) Posts() (posts []*Post) {
 				url, exist := ss.Find("a").Attr("href")
 				if exist {
 					// Url
+					detail := c.PostDetail(url)
+					Insert(detail)
 					post.Url = url
 				}
 			case 1: // author
@@ -58,6 +60,7 @@ func (c *Client) Posts() (posts []*Post) {
 				post.LastPostTime = strings.TrimSpace(ss.Text())
 			}
 		})
+
 		posts = append(posts, post)
 	})
 	return posts

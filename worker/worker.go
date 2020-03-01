@@ -25,6 +25,7 @@ func (w *Worker) fetchPosts() []*douban.Post {
 	posts := w.client.Posts()
 	for _, post := range posts {
 		log.Printf("%s %s %s %s %s", post.Title, post.Author, post.LastRePost, post.LastPostTime, post.Url)
+		// INSERT into elasticsearch
 	}
 	return posts
 }
