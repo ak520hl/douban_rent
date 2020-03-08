@@ -3,13 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="947ca51d-c6af-45d7-abe5-6bdb597d399b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/douban/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/douban/client.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/douban/posts.go" beforeDir="false" afterPath="$PROJECT_DIR$/douban/posts.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/modules.txt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/modules.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/worker/worker.go" beforeDir="false" afterPath="$PROJECT_DIR$/worker/worker.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +91,7 @@
       <option name="presentableId" value="Default" />
       <updated>1582608653156</updated>
       <workItem from="1582608654949" duration="12853000" />
-      <workItem from="1582942675177" duration="13492000" />
+      <workItem from="1582942675177" duration="15354000" />
     </task>
     <servers />
   </component>
@@ -180,9 +173,10 @@
       <screen x="1440" y="-138" width="1920" height="1080" />
     </state>
     <state width="600" height="424" key="javadoc.popup/0.0.1440.900/1440.-138.1920.1080@1440.-138.1920.1080" timestamp="1582778278329" />
-    <state x="2065" y="186" width="670" height="675" key="run.anything.popup" timestamp="1583062074158">
-      <screen x="1440" y="-138" width="1920" height="1080" />
+    <state x="2065" y="186" width="670" height="675" key="run.anything.popup" timestamp="1583324564474">
+      <screen x="1440" y="-115" width="1920" height="1057" />
     </state>
     <state x="2065" y="186" width="670" height="675" key="run.anything.popup/0.0.1440.900/1440.-138.1920.1080@1440.-138.1920.1080" timestamp="1583062074158" />
+    <state x="2065" y="186" width="670" height="675" key="run.anything.popup/0.23.1440.877/1440.-115.1920.1057@1440.-115.1920.1057" timestamp="1583324564474" />
   </component>
 </project>
